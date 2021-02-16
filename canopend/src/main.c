@@ -23,6 +23,8 @@
  * limitations under the License.
  */
 
+#define CO_NO_LSS_SERVER 0
+#define CO_NO_LSS_CLIENT 0
 
 #include "CANopen.h"
 #include "CO_OD_storage.h"
@@ -45,6 +47,7 @@
 #include "CO_command.h"
 #include <pthread.h>
 #endif
+
 
 
 #define NSEC_PER_SEC            (1000000000)    /* The number of nanoseconds per second. */
@@ -154,6 +157,23 @@ int main (int argc, char *argv[]) {
     typedef enum CMD_MODE {CMD_NONE, CMD_LOCAL, CMD_REMOTE} cmdMode_t;
     cmdMode_t commandEnable = CMD_NONE;   /* Configurable by arguments */
 #endif
+
+ OD_micontrolCmd1.cmdData0_i16 = 0x00;
+					   OD_micontrolCmd1.cmdData1 = 0x00;//engineFrontLeftRPM;
+					   OD_micontrolCmd1.cmdData2 = 0x00;
+					   OD_micontrolCmd1.cmdExecOnChange = 0x3;
+					   OD_micontrolCmd2.cmdData0_i16 = 0x00;
+					   OD_micontrolCmd2.cmdData1 = 0x00;//engineFrontLeftRPM;
+					   OD_micontrolCmd2.cmdData2 = 0x00;
+					   OD_micontrolCmd2.cmdExecOnChange = 0x3;
+					   OD_micontrolCmd3.cmdData0_i16 = 0x00;
+					   OD_micontrolCmd3.cmdData1 = 0x00;//engineFrontLeftRPM;
+					   OD_micontrolCmd3.cmdData2 = 0x00;
+					   OD_micontrolCmd3.cmdExecOnChange = 0x3;
+					   OD_micontrolCmd4.cmdData0_i16 = 0x00;
+					   OD_micontrolCmd4.cmdData1 = 0x00;//engineFrontLeftRPM;
+					   OD_micontrolCmd4.cmdData2 = 0x00;
+					   OD_micontrolCmd4.cmdExecOnChange = 0x3;
 
     if(argc < 2 || strcmp(argv[1], "--help") == 0){
         printUsage(argv[0]);

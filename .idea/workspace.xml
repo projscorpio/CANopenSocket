@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05777d00-88c9-40e9-880a-c71cb9cf39a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/CANopen.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/CANopen.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/CANopen.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/CANopen.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/Doxyfile" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/Doxyfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/codingStyle" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/codingStyle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/CO_OD.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/CO_OD.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/CO_OD.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/CO_OD.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/CO_OD_with_trace/CO_OD.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/CO_OD_with_trace/CO_OD.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/CO_OD_with_trace/CO_OD.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/CO_OD_with_trace/CO_OD.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/IO.eds" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/IO.eds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/IO.html" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/IO.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/_project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/application.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/application.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/example/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/example/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_Emergency.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_Emergency.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_Emergency.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_Emergency.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_HBconsumer.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_HBconsumer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_HBconsumer.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_HBconsumer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_LSS.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_LSS.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSmaster.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSmaster.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSmaster.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSmaster.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSslave.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSslave.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSslave.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_LSSslave.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_NMT_Heartbeat.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_NMT_Heartbeat.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_NMT_Heartbeat.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_NMT_Heartbeat.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_PDO.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_PDO.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_PDO.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_PDO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SDO.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SDO.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SDO.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SDO.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SDOmaster.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SDOmaster.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SDOmaster.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SDOmaster.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SYNC.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SYNC.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_SYNC.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_SYNC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_trace.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_trace.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/CO_trace.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/CO_trace.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_CAN.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_CAN.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC1768/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CANOpenTask.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CANOpenTask.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CANOpenTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CANOpenTask.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/application.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/application.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/readme" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/LPC177x_8x/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/readme" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/MCF5282/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC24_dsPIC33/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC24_dsPIC33/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC24_dsPIC33/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC24_dsPIC33/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC32/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC32/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC32/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC32/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC32/eeprom.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC32/eeprom.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC32/eeprom.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC32/eeprom.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/PIC32/main_PIC32.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/PIC32/main_PIC32.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_Flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_Flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_Flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_Flash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/readme" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/SAM3X/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_Flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_Flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_Flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_Flash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/STM32F3/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/crc16-ccitt.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/crc16-ccitt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/crc16-ccitt.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/crc16-ccitt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/eeprom.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/eeprom.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/eeprom.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/drvTemplate/eeprom.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/dsPIC30F/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/dsPIC30F/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/dsPIC30F/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/dsPIC30F/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_Flash.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_Flash.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_Flash.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_Flash.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_PollingTimer.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_PollingTimer.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_PollingTimer.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_PollingTimer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/application.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/application.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/ecos_helper.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/ecos_helper.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/ecos_helper.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/ecos_helper.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/eCos/readme" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/eCos/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_Linux_tasks.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_Linux_tasks.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_Linux_tasks.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_Linux_tasks.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_OD_storage.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_OD_storage.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_OD_storage.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_OD_storage.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_driver.c" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_driver.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/CANopenNode/stack/socketCAN/CO_driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencgi/CANopenCGI.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopencgi/CANopenCGI.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencgi/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/canopencgi/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencgi/canopen.conf" beforeDir="false" afterPath="$PROJECT_DIR$/canopencgi/canopen.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencomm/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/canopencomm/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencomm/.project" beforeDir="false" afterPath="$PROJECT_DIR$/canopencomm/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencomm/CANopenCommand.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopencomm/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/canopencomm/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/.project" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/app/application.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/app/application.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/app/application.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/app/application.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/app/od_storage" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/app/od_storage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/app/od_storage_auto" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/app/od_storage_auto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/CANopenSocket.eds" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/CANopenSocket.eds" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/CANopenSocket.html" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/CANopenSocket.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/CO_OD.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/CO_OD.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/CO_OD.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/CO_OD.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/_project.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/objDict/_project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/objDict/_project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_LSS_master.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_LSS_master.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_LSS_master.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_LSS_master.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_comm_helpers.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_comm_helpers.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_comm_helpers.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_comm_helpers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_command.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_command.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_command.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_command.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_master.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_master.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_master.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_master.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_time.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_time.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/CO_time.h" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/CO_time.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/canopend/src/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/canopend/src/main.c" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="-1" />
+    <option name="width" value="1920" />
+    <option name="height" value="1061" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="CANopenSocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CANopenSocket" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CANopenSocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CANopenSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="canopend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CANopenSocket" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CANopenSocket" type="462c0819:PsiDirectoryNode" />
+              <item name="canopend" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05777d00-88c9-40e9-880a-c71cb9cf39a8" name="Default Changelist" comment="" />
+      <created>1610992374812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610992374812</updated>
+      <workItem from="1610992377588" duration="621000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="621000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="-1" width="1920" height="1061" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12179487" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

@@ -28,7 +28,7 @@
 #include "CO_command.h"
 #include "CO_comm_helpers.h"
 #include "CO_master.h"
-#include "CO_LSS_master.h"
+//#include "CO_LSS_master.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -268,7 +268,7 @@ static void command_process(int fd, char* command, size_t commandLength) {
     char *token;
     int i;
     uint32_t ui[3];
-    uint8_t comm_node = 0xFF; /* undefined */
+    uint32_t comm_node = 0xFF; /* undefined */
 
     char* resp;
     size_t respSize = sizeof *resp * STRING_BUFFER_SIZE;
@@ -318,13 +318,14 @@ static void command_process(int fd, char* command, size_t commandLength) {
             comm_node = comm_node_default; /* may be undefined */
             break;
         case 1: /* <node> and <command> tokens */
-            if(ui[0] < 0 || ui[0] > 127) {
+            /*if(ui[0] < 0 || ui[0] > 127) {
                 err = 1;
                 respErrorCode = respErrorUnsupportedNode;
             }
             else {
                 comm_node = (uint8_t) ui[0];
-            }
+            }*/
+			comm_node = ui[0];
             break;
         case 2: /* <net>, <node> and <command> tokens */
             if(ui[0] < 1 || ui[0] > 1) {
@@ -573,6 +574,350 @@ static void command_process(int fd, char* command, size_t commandLength) {
                 }
             }
         }
+		else if(strcmp(token, "en") == 0) {
+            lastTok(NULL, spaceDelim, &err);
+			printf("got en\n");
+			CO->NMT->operatingState = CO_NMT_OPERATIONAL;
+			uint32_t SDOabortCode = 1;
+			uint8_t data;
+				data= 0x15;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        1,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+					data = 0x21;
+			  err = sdoClientDownload(
+                        CO->SDOclient,
+                        1,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+			  /*2*/
+			  		data= 0x15;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        2,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+					data = 0x21;
+			  err = sdoClientDownload(
+                        CO->SDOclient,
+                        2,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+						/*3*/
+								data= 0x15;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        3,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+					data = 0x21;
+			  err = sdoClientDownload(
+                        CO->SDOclient,
+                        3,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+						/*4*/
+								data= 0x15;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        4,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+					data = 0x21;
+			  err = sdoClientDownload(
+                        CO->SDOclient,
+                        4,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+			OD_micontrolCmd1.cmdData0_i16 = 0x00;
+			OD_micontrolCmd1.cmdData1 = 0;
+			OD_micontrolCmd1.cmdData2 = 0x00;
+			OD_micontrolCmd1.cmdExecOnChange = 0x32;
+			OD_micontrolCmd2.cmdData0_i16 = 0x00;
+			OD_micontrolCmd2.cmdData1 = 0;
+			OD_micontrolCmd2.cmdData2 = 0x00;
+			OD_micontrolCmd2.cmdExecOnChange = 0x32;
+			OD_micontrolCmd3.cmdData0_i16 = 0x00;
+			OD_micontrolCmd3.cmdData1 = 0;
+			OD_micontrolCmd3.cmdData2 = 0x00;
+			OD_micontrolCmd3.cmdExecOnChange = 0x32;
+			OD_micontrolCmd4.cmdData0_i16 = 0x00;
+			OD_micontrolCmd4.cmdData1 = 0;
+			OD_micontrolCmd4.cmdData2 = 0x00;
+			OD_micontrolCmd4.cmdExecOnChange = 0x32;
+			CO_sendNMTcommand(CO, CO_NMT_ENTER_OPERATIONAL, 0);
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }
+        }
+		else if(strcmp(token, "dis") == 0) {
+            lastTok(NULL, spaceDelim, &err);
+			printf("got dis\n");
+					OD_micontrolCmd1.cmdData0_i16 = 0x00;
+			OD_micontrolCmd1.cmdData1 = 0;
+			OD_micontrolCmd1.cmdData2 = 0x00;
+			OD_micontrolCmd1.cmdExecOnChange = 0x32;
+			OD_micontrolCmd2.cmdData0_i16 = 0x00;
+			OD_micontrolCmd2.cmdData1 = 0;
+			OD_micontrolCmd2.cmdData2 = 0x00;
+			OD_micontrolCmd2.cmdExecOnChange = 0x32;
+			OD_micontrolCmd3.cmdData0_i16 = 0x00;
+			OD_micontrolCmd3.cmdData1 = 0;
+			OD_micontrolCmd3.cmdData2 = 0x00;
+			OD_micontrolCmd3.cmdExecOnChange = 0x32;
+			OD_micontrolCmd4.cmdData0_i16 = 0x00;
+			OD_micontrolCmd4.cmdData1 = 0;
+			OD_micontrolCmd4.cmdData2 = 0x00;
+			OD_micontrolCmd4.cmdExecOnChange = 0x32;
+		uint32_t SDOabortCode = 1;
+			uint8_t data;
+				data= 0x20;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        1,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+								data= 0x20;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        2,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+								data= 0x20;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        3,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+								data= 0x20;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        4,
+                        0x3000,
+                        0x1,
+                        &data,
+                        1,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+						
+
+			CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, 1);
+			CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, 2);
+			CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, 3);
+			CO_sendNMTcommand(CO, CO_NMT_ENTER_PRE_OPERATIONAL, 4);
+			
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }
+        }
+		else if(strcmp(token, "stp") == 0) {
+            lastTok(NULL, spaceDelim, &err);
+			printf("emcy stop\n");
+		OD_micontrolCmd1.cmdData0_i16 = 0x00;
+			OD_micontrolCmd1.cmdData1 = 0;
+			OD_micontrolCmd1.cmdData2 = 0x00;
+			OD_micontrolCmd1.cmdExecOnChange = 0x32;
+			OD_micontrolCmd2.cmdData0_i16 = 0x00;
+			OD_micontrolCmd2.cmdData1 = 0;
+			OD_micontrolCmd2.cmdData2 = 0x00;
+			OD_micontrolCmd2.cmdExecOnChange = 0x32;
+			OD_micontrolCmd3.cmdData0_i16 = 0x00;
+			OD_micontrolCmd3.cmdData1 = 0;
+			OD_micontrolCmd3.cmdData2 = 0x00;
+			OD_micontrolCmd3.cmdExecOnChange = 0x32;
+			OD_micontrolCmd4.cmdData0_i16 = 0x00;
+			OD_micontrolCmd4.cmdData1 = 0;
+			OD_micontrolCmd4.cmdData2 = 0x00;
+			OD_micontrolCmd4.cmdExecOnChange = 0x32;
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }
+        }
+		else if(strcmp(token, "fl") == 0) {
+			
+			
+			
+			
+			
+			
+			
+			lastTok(NULL, spaceDelim, &err);
+			int32_t speed =0;
+			if(comm_node > 1000) speed = (comm_node - 3000); else speed = comm_node;
+            printf("got fl: %d\n", speed);
+			/*uint32_t SDOabortCode = 1;
+   int16_t data;
+				data= (short)speed;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        1,
+                        0x3500,
+                        0x0,
+                        &data,
+                        2,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+				
+   
+   
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }*/
+			OD_micontrolCmd1.cmdData0_i16 = 0x00;
+			OD_micontrolCmd1.cmdData1 = speed;
+			OD_micontrolCmd1.cmdData2 = 0x00;
+			OD_micontrolCmd1.cmdExecOnChange = 0x32;
+        }
+		else if(strcmp(token, "rl") == 0) {
+			
+			
+			lastTok(NULL, spaceDelim, &err);
+			int32_t speed =0;
+			if(comm_node > 1000) speed = (comm_node - 3000); else speed = comm_node;
+            printf("got rl: %d\n", speed);
+/*uint32_t SDOabortCode = 1;
+   int16_t data;
+				data= (short)speed;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        2,
+                        0x3500,
+                        0x0,
+                        &data,
+                        2,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }*/
+			OD_micontrolCmd2.cmdData0_i16 = 0x00;
+			OD_micontrolCmd2.cmdData1 = speed;
+			OD_micontrolCmd2.cmdData2 = 0x00;
+			OD_micontrolCmd2.cmdExecOnChange = 0x32;
+        }
+		else if(strcmp(token, "rr") == 0) {
+			
+		
+			
+			
+			lastTok(NULL, spaceDelim, &err);
+			int32_t speed =0;
+			if(comm_node > 1000) speed = (comm_node - 3000)*-1; else speed = comm_node*-1;
+            printf("got rr: %d\n", speed);
+	/*uint32_t SDOabortCode = 1;
+	
+	   int16_t data;
+				data= (short)speed;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        3,
+                        0x3500,
+                        0x0,
+                        &data,
+                        2,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+	
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }*/
+				OD_micontrolCmd3.cmdData0_i16 = 0x00;
+			OD_micontrolCmd3.cmdData1 = speed;
+			OD_micontrolCmd3.cmdData2 = 0x00;
+			OD_micontrolCmd3.cmdExecOnChange = 0x32;
+        }
+		else if(strcmp(token, "fr") == 0) {
+
+		lastTok(NULL, spaceDelim, &err);
+			int32_t speed =0;
+			if(comm_node > 1000) speed = (comm_node - 3000)*-1; else speed = comm_node*-1;
+            printf("got rr: %d\n", speed);
+		/*	uint32_t SDOabortCode = 1;
+   int16_t data;
+				data= (short)speed;
+						err = sdoClientDownload(
+                        CO->SDOclient,
+                        4,
+                        0x3500,
+                        0x0,
+                        &data,
+                        2,
+                        &SDOabortCode,
+                        SDOtimeoutTime,
+                        0);
+
+
+
+            if(err == 0) {
+                respLen = sprintf(resp, "[%d] OK", sequence);
+            }*/
+			OD_micontrolCmd4.cmdData0_i16 = 0x00;
+			OD_micontrolCmd4.cmdData1 = speed;
+			OD_micontrolCmd4.cmdData2 = 0x00;
+			OD_micontrolCmd4.cmdExecOnChange = 0x32;
+        }
 
         /* set command - multiple settings */
         else if(strcmp(token, "set") == 0) {
@@ -630,321 +975,6 @@ static void command_process(int fd, char* command, size_t commandLength) {
                 /* Unknown command */
                 else {
                     err = 1;
-                }
-            }
-        }
-
-        /* LSS command */
-        else if (strstr(token, "lss_") != NULL) {
-            err = 0;
-            respLen = 0;
-
-            /* Switch state global command */
-            if(strcmp(token, "lss_switch_glob") == 0) {
-                uint8_t select;
-
-                token = getTok(NULL, spaceDelim, &err);
-                select = (uint8_t)getU32(token, 0, 1, &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    if (select == 0) {
-                        err = lssSwitchStateDeselect(CO->LSSmaster);
-                    }
-                    else {
-                        err = lssSwitchStateSelect(CO->LSSmaster, true, 0, 0, 0, 0);
-                    }
-                }
-            }
-
-            /* Switch state selective command */
-            else if(strcmp(token, "lss_switch_sel") == 0) {
-                uint32_t vendorId;
-                uint32_t productCode;
-                uint32_t revisionNo;
-                uint32_t serialNo;
-
-                token = getTok(NULL, spaceDelim, &err);
-                vendorId = getU32(token, 0, 0xFFFFFFFF, &err);
-
-                token = getTok(NULL, spaceDelim, &err);
-                productCode = getU32(token, 0, 0xFFFFFFFF, &err);
-
-                token = getTok(NULL, spaceDelim, &err);
-                revisionNo = getU32(token, 0, 0xFFFFFFFF, &err);
-
-                token = getTok(NULL, spaceDelim, &err);
-                serialNo = getU32(token, 0, 0xFFFFFFFF, &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssSwitchStateSelect(CO->LSSmaster, false,
-                              vendorId, productCode, revisionNo, serialNo);
-                }
-            }
-
-            /* LSS configure node-ID command */
-            else if(strcmp(token, "lss_set_node") == 0) {
-                uint8_t nid;
-
-                token = getTok(NULL, spaceDelim, &err);
-                nid = (uint8_t)getU32(token, 0, 0xFF, &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssConfigureNodeId(CO->LSSmaster, nid);
-                    if(err == CO_LSSmaster_OK_ILLEGAL_ARGUMENT){
-                        respErrorCode = respErrorLSSnodeIdNotSupported;
-                    }
-                }
-            }
-
-            /* LSS configure bit-rate command */
-            else if(strcmp(token, "lss_conf_bitrate") == 0) {
-                uint8_t tableIndex;
-
-                /* First parameter is table selector. We only support the CiA
-                 * bit timing table from CiA301 ("0") */
-                token = getTok(NULL, spaceDelim, &err);
-                (void)getU32(token, 0, 0, &err);
-
-                /* the table has entries from 0..9 */
-                token = getTok(NULL, spaceDelim, &err);
-                tableIndex = (uint8_t)getU32(token, 0, 9, &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssConfigureBitTiming(CO->LSSmaster, tableIndex);
-                    if(err == CO_LSSmaster_OK_ILLEGAL_ARGUMENT){
-                        respErrorCode = respErrorLSSbitRateNotSupported;
-                    }
-                }
-            }
-
-            /* LSS activate new bit-rate command */
-            else if(strcmp(token, "lss_activate_bitrate") == 0) {
-                uint16_t switchDelay;
-
-                token = getTok(NULL, spaceDelim, &err);
-                switchDelay = (uint16_t)getU32(token, 0, 0xFFFF, &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssActivateBit(CO->LSSmaster, switchDelay);
-                }
-            }
-
-            /* LSS store configuration command */
-            else if(strcmp(token, "lss_store") == 0) {
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssConfigureStore(CO->LSSmaster);
-                    if(err == CO_LSSmaster_OK_ILLEGAL_ARGUMENT){
-                        respErrorCode = respErrorLSSparameterStoringFailed;
-                    }
-                }
-            }
-
-            /* Inquire LSS address command */
-            else if(strcmp(token, "lss_inquire_addr") == 0) {
-                uint32_t vendorId;
-                uint32_t productCode;
-                uint32_t revisionNo;
-                uint32_t serialNo;
-                const dataType_t *datatype;
-
-                datatype = getDataType("u32", &err);
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssInquireLssAddress(CO->LSSmaster,
-                              &vendorId, &productCode, &revisionNo, &serialNo);
-                }
-                if (err == 0) {
-                    respLen = sprintf(resp, "[%d] ", sequence);
-
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&vendorId, sizeof(vendorId));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&productCode, sizeof(productCode));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&revisionNo, sizeof(revisionNo));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&serialNo, sizeof(serialNo));
-                }
-            }
-
-            /* LSS inquire node-ID command */
-            else if(strcmp(token, "lss_get_node") == 0) {
-                uint8_t nid;
-
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssInquireNodeId(CO->LSSmaster, &nid);
-                }
-                if (err == 0) {
-                    respLen = sprintf(resp, "[%d] %d", sequence, nid);
-                }
-            }
-            /* LSS identify fastscan. This is a manufacturer specific command as
-             * the one in DSP309 is quite useless */
-            else if(strcmp(token, "_lss_fastscan") == 0) {
-                uint32_t vendorId = 0;
-                uint32_t productCode = 0;
-                uint32_t revisionNo = 0;
-                uint32_t serialNo = 0;
-                uint16_t timeout;
-                const dataType_t *datatype;
-
-                token = getTok(NULL, spaceDelim, &err);
-                timeout = (uint16_t)getU32(token, 0, 0xFFFF, &err);
-                if (timeout==0 || err!=0) {
-                    /* if no timeout was given, use 100ms. Should work in most
-                     * cases */
-                    err = 0;
-                    timeout = 100;
-                }
-
-                lastTok(NULL, spaceDelim, &err);
-                datatype = getDataType("u32", &err);
-
-                if(err == 0) {
-                    err = lssIdentifyFastscan(CO->LSSmaster, timeout,
-                              0, &vendorId, 0, &productCode, 0, &revisionNo, 0, &serialNo);
-                    if (err == CO_LSSmaster_SCAN_FINISHED) {
-                        err = 0;
-                    }
-                }
-                if (err == 0) {
-                    respLen = sprintf(resp, "[%d] ", sequence);
-
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&vendorId, sizeof(vendorId));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&productCode, sizeof(productCode));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&revisionNo, sizeof(revisionNo));
-                    respLen += sprintf(resp+respLen, " ");
-                    respLen += datatype->dataTypePrint(resp+respLen, respSize-respLen,
-                                   (char*)&serialNo, sizeof(serialNo));
-                }
-            }
-            /*  LSS complete node-ID configuration command */
-            else if(strcmp(token, "lss_allnodes") == 0) {
-                uint32_t vendorId;
-                uint32_t productCode;
-                uint32_t revisionNo;
-                uint32_t serialNo;
-                uint8_t scanType[4];
-                uint16_t timeout;
-                uint8_t nodeStart;
-                uint8_t nodeCount;
-                uint8_t store;
-
-                token = getTok(NULL, spaceDelim, &err);
-                timeout = (uint16_t)getU32(token, 0, 0xFFFF, &err);
-                if (timeout==0 || err!=0) {
-                    /* if no timeout was given, use 100ms. Should work in most
-                     * cases */
-                    err = 0;
-                    timeout = 100;
-                }
-
-                token = getTok(NULL, spaceDelim, &err);
-                if (err != 0) {
-                    /* CiA specification for this command takes no arguments. Do
-                     * full scan. */
-                    err = 0;
-                    vendorId = 0;
-                    productCode = 0;
-                    revisionNo = 0;
-                    serialNo = 0;
-                    /* use start node ID 2. Should work in most cases */
-                    nodeStart = 2;
-                    /* store node ID in node's NVM */
-                    store = 1;
-                    memset(scanType, 0, sizeof(scanType));
-                } else {
-
-                    nodeStart = (uint8_t)getU32(token, 1, 127, &err);
-
-                    token = getTok(NULL, spaceDelim, &err);
-                    store = (uint8_t)getU32(token, 0, 1, &err);
-
-                    token = getTok(NULL, spaceDelim, &err);
-                    scanType[0] = (uint8_t)getU32(token, 0, 2, &err);
-                    token = getTok(NULL, spaceDelim, &err);
-                    vendorId = (uint32_t)getU32(token, 0, 0xFFFFFFFF, &err);
-
-                    token = getTok(NULL, spaceDelim, &err);
-                    scanType[1] = (uint8_t)getU32(token, 0, 2, &err);
-                    token = getTok(NULL, spaceDelim, &err);
-                    productCode = (uint32_t)getU32(token, 0, 0xFFFFFFFF, &err);
-
-                    token = getTok(NULL, spaceDelim, &err);
-                    scanType[2] = (uint8_t)getU32(token, 0, 2, &err);
-                    token = getTok(NULL, spaceDelim, &err);
-                    revisionNo = (uint32_t)getU32(token, 0, 0xFFFFFFFF, &err);
-
-                    token = getTok(NULL, spaceDelim, &err);
-                    scanType[3] = (uint8_t)getU32(token, 0, 2, &err);
-                    token = getTok(NULL, spaceDelim, &err);
-                    serialNo = (uint32_t)getU32(token, 0, 0xFFFFFFFF, &err);
-                }
-                lastTok(NULL, spaceDelim, &err);
-
-                if(err == 0) {
-                    err = lssEnumerateFastscan(CO->LSSmaster, timeout,
-                              nodeStart, &nodeCount, store,
-                              scanType[0], vendorId,
-                              scanType[1], productCode,
-                              scanType[2], revisionNo,
-                              scanType[3], serialNo);
-                }
-                if (err == 0) {
-                  respLen = sprintf(resp, "[%d] OK, found %d nodes starting at node ID %d. ",
-                                sequence, nodeCount, nodeStart);
-                  if ((nodeStart + nodeCount - 1) == 127) {
-                      respLen += sprintf(resp+respLen, "Assignment process was stopped"
-                                     " at ID 127. There still might be unconfigured"
-                                     " nodes remaining. Re-run with lower start ID to"
-                                     " find them.");
-                  }
-                }
-            }
-            else {
-                /* unknown LSS command */
-                respErrorCode = respErrorReqNotSupported;
-                err = 1;
-            }
-
-            /* token / LSS default command result. This info is displayed when
-             * the processed LSS command did not print a specific output. */
-            if (respLen==0 && respErrorCode==0) {
-                if(err==CO_LSSmaster_TIMEOUT || err==CO_LSSmaster_SCAN_NOACK){
-                    respErrorCode = respErrorTimeOut;
-                }
-                else if (err == CO_LSSmaster_OK_MANUFACTURER) {
-                    respErrorCode = respErrorLSSmanufacturer;
-                }
-                else if (err < 0) {
-                    respErrorCode = respErrorInternalState;
-                } else {
-                    respLen = sprintf(resp, "[%d] OK", sequence);
                 }
             }
         }
